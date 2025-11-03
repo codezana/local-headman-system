@@ -1,0 +1,156 @@
+   
+     .description-cell {
+        position: relative;
+        cursor: pointer;
+        max-height: 1.5em;
+        /* Adjust this value to control initial height */
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        /* Add smooth transition effect */
+    }
+
+    .full-description {
+        display: inline-block;
+        /* Initially hide full description */
+    }
+
+    .description-cell.expanded {
+        max-height: none;
+        /* Expand to show full description */
+    }
+
+
+
+
+    p:last-child {
+        margin-bottom: 0;
+        /* padding: 27px; */
+        text-align: justify;
+    }
+
+    .close-modal:hover {
+        background-color: red;
+        color: white
+    }
+
+    /* Truncated description in the table cell */
+    .truncated-description {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .show-description-modal {
+        color: blue;
+        cursor: pointer;
+    }
+   /* Style for the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        white-space: normal;
+    }
+
+    .modaldeletedata {
+        background-color: #fff;
+    
+        border: 1px solid #888;
+        text-align: center;
+        transition: .3s all;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        pointer-events: auto;
+
+        background-clip: padding-box;
+    
+        border-radius: 0.3rem;
+        outline: 0;
+        margin: auto;
+    padding: 20px;
+    width: 30% !important;
+
+    
+    }
+
+    .close {
+        align-self: end;
+        float: left;
+        cursor: pointer;
+    }
+
+    /* Style for the button, adjust as needed */
+    .delete-button {
+        cursor: pointer;
+    }
+
+
+
+    .noselect {
+        align-self: center;
+        padding-left: 16px;
+        height: 50px;
+        width: 180px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background: red;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+        background: #e62222;
+        justify-content: end;
+    }
+
+    .noselect,
+    .noselect span {
+        transition: 200ms;
+    }
+
+    .noselect .text {
+        color: white;
+        font-weight: bold;
+    }
+
+    button .icon {
+        position: absolute;
+     
+        transform: translateX(110px);
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+       
+    }
+
+    button svg {
+        width: 15px;
+        fill: #eee;
+    }
+
+    button:hover {
+        background: #ff3636;
+    }
+
+    button:hover .text {
+        color: transparent;
+    }
+
+    button:hover .icon {
+        width: 150px;
+        transform: translateX(-60px);
+        border-left: none;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    
+  
